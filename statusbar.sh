@@ -29,7 +29,7 @@ workspaces()
         #elif [ "${SPACE:0:1}" == 'o' ]; then
         #    fg
         elif [ "${SPACE:0:1}" == 'f' ]; then
-            fg "#515151"
+            fg "#717171"
         elif [ "${SPACE:0:1}" == 'U' ]; then
             fg "#F2D134"
         elif [ "${SPACE:0:1}" == 'u' ]; then
