@@ -71,6 +71,17 @@ keyboard()
     echo -n "^ca(1, keyboardtoggle.sh)$enabled^ca()"
 }
 
+mouse()
+{
+    read -r enabled < $HOME/.mouse
+    if [ $enabled = "enabled" ]; then
+        fg "#11AA11"
+    elif [ $enabled = "disabled" ]; then
+        fg "#AABFFF"
+    fi
+    echo -n "^ca(1, mousetoggle.sh)$enabled^ca()"
+}
+
 #ADD: mpc, vol
 align "_LEFT" 
 workspaces
@@ -78,10 +89,12 @@ align "_CENTER"
 align "-90"
 curtime
 align "_RIGHT"
-align "-300"
+align "-370"
 battery
 separator
 diskspace
 separator
 keyboard
+separator
+mouse
 echo
