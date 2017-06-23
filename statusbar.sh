@@ -1,5 +1,7 @@
 #!/bin/bash
 
+basedir=$(dirname $0)
+
 separator()
 {
     echo -n " ^fg()| "
@@ -68,7 +70,7 @@ keyboard()
     elif [ $enabled = "disabled" ]; then
         fg "#AABFFF"
     fi
-    echo -n "^ca(1, keyboardtoggle.sh)$enabled^ca()"
+    echo -n "^ca(1, $basedir/keyboardtoggle.sh)$enabled^ca()"
 }
 
 mouse()
@@ -79,7 +81,7 @@ mouse()
     elif [ $enabled = "disabled" ]; then
         fg "#AABFFF"
     fi
-    echo -n "^ca(1, mousetoggle.sh)$enabled^ca()"
+    echo -n "^ca(1, $basedir/mousetoggle.sh)$enabled^ca()"
 }
 
 #ADD: mpc, vol
