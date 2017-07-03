@@ -58,7 +58,7 @@ battery()
 diskspace()
 {
     echo -n "Disk Usage: "
-    usage=$(df -h /dev/dm-2 | tail -n 1 | cut -d ' ' -f 10)
+    usage=$(df -h /dev/dm-2 | tail -n 1 | cut -d ' ' -f 11)
     echo -n $usage
 }
 
